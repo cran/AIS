@@ -1,0 +1,67 @@
+#public methods
+
+# frexp related
+export(frexp)
+
+# true random numbers
+export(resetSeed,runifT)
+export(runifS) # 1.06
+
+# generalized inverse
+export(sechol)
+
+# optimization testing
+export(dehaan,starr)
+export(LRE)
+
+# model comparison function , v 1.18
+export(modelBetas)
+export(modelSummary)
+export(modelsAgree)
+export(modelsCompare) 
+
+#perturbation
+export(perturb )  # main  routine for running perturbations
+export(sensitivity)  # main  routine for running perturbations
+export(PTBi, PTBms, PTBmsb, PTBmsbr)  # noise functions for vections
+export(PTBn, PTBnc, PTBns, PTBnbr, PTBnbrr, PTBnsbr, PTBnsbrr) 
+export(PTBu, PTBuc, PTBus, PTBubr, PTBubrr, PTBusbr, PTBusbrr)
+export(PTBmu.gen, PTBmn.gen)  #1.04 PTB multiple times
+#Discrete Perturbation Methods (1.05)
+export(PTBdiscrete,PTBdefault,PTBdefaultfn,reclass.mat.diag,reclass.mat.random) 
+
+#### (plot,print,summary)
+S3method(print, sensitivity)
+S3method(print, sensitivity.summary)
+S3method(plot, sensitivity)
+S3method(summary, sensitivity)
+S3method(plot,sensitivity.summary) # 1.06
+
+### anova support
+S3method(anova, sensitivity) # 1.04
+S3method(print, sensitivity.anova) # 1.05
+S3method(plot, sensitivity.anova) # 1.05
+
+### zelig integration
+export(pzelig,psim,sensitivityZelig)
+export(setx.sensitivity)
+S3method(print, sensitivity.sim) # 1.05
+S3method(plot, sensitivity.sim) # 1.05
+S3method(print, sensitivity.sim.summary) 
+S3method(summary, sensitivity.sim) # 1.05
+S3method(print,accFirstLook)
+S3method(plot,accFirstLook)
+
+# R2HTML Support
+export(HTML.sensitivity.summary)
+export(HTML.sensitivity.sim.summary)
+export(HTML.sensitivity.anova)
+
+# v 1.27
+export(firstLook)
+
+
+#import for onLoad and forceDispatch
+
+importFrom(utils,getFromNamespace,assignInNamespace,citation)
+useDynLib("accuracy")

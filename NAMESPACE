@@ -1,0 +1,5 @@
+export(DWIMxtabs,HTML.DWIMxtabs)
+S3method(print,DWIMxtabs) 
+export(look)
+S3method(print,AISFirstLook)
+S3method(plot,AISFirstLook)
